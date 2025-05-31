@@ -48,37 +48,42 @@ st.markdown("""
     /* Main header styling */
     .main-header {
         font-family: 'Playfair Display', serif;
-        font-size: 3.5rem;
+        font-size: 2.8rem;
         font-weight: 700;
         background: linear-gradient(135deg, #A44A3F 0%, #2A2A2A 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-align: center;
-        margin-bottom: 2rem;
-        padding: 1rem 0;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0;
     }
     
     /* Sub-header styling */
     .sub-header {
         font-family: 'Playfair Display', serif;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 700;
         color: #2A2A2A;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         border-bottom: 2px solid #A44A3F;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
     }
     
     /* Metric cards with modern design */
     .metric-card {
         background: linear-gradient(135deg, #F5F2EA 0%, #D7CEB2 100%);
-        border-radius: 15px;
-        padding: 1.5rem;
+        border-radius: 12px;
+        padding: 1rem;
         text-align: center;
         box-shadow: 0 4px 15px rgba(42, 42, 42, 0.1);
         border: 1px solid rgba(164, 74, 63, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
     }
     
     .metric-card:hover {
@@ -109,9 +114,9 @@ st.markdown("""
         font-family: 'Lato', sans-serif;
         font-weight: 500;
         width: 100%;
-        border-radius: 10px;
-        height: 3.5rem;
-        font-size: 1.1rem;
+        border-radius: 8px;
+        height: 2.8rem;
+        font-size: 1rem;
         background: linear-gradient(135deg, #A44A3F 0%, #2A2A2A 100%);
         color: #F5F2EA;
         border: none;
@@ -134,7 +139,7 @@ st.markdown("""
     .stFileUploader > div {
         border: 2px dashed #A44A3F;
         border-radius: 10px;
-        padding: 2rem;
+        padding: 1.5rem;
         background: linear-gradient(135deg, #F5F2EA 0%, #D7CEB2 100%);
     }
     
@@ -156,27 +161,27 @@ st.markdown("""
     .alert-info {
         background: linear-gradient(135deg, #F5F2EA 0%, #D7CEB2 100%);
         border-left: 4px solid #A59E8C;
-        padding: 1rem;
+        padding: 0.75rem;
         border-radius: 5px;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
         font-family: 'Lato', sans-serif;
     }
     
     .alert-success {
         background: linear-gradient(135deg, #D7CEB2 0%, #A59E8C 100%);
         border-left: 4px solid #A59E8C;
-        padding: 1rem;
+        padding: 0.75rem;
         border-radius: 5px;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
         font-family: 'Lato', sans-serif;
     }
     
     .alert-warning {
         background: linear-gradient(135deg, #F5F2EA 0%, #D7CEB2 100%);
         border-left: 4px solid #A44A3F;
-        padding: 1rem;
+        padding: 0.75rem;
         border-radius: 5px;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
         font-family: 'Lato', sans-serif;
     }
     
@@ -261,8 +266,8 @@ def create_metric_card(title, value, delta=None, card_type="default"):
     
     card_html = f"""
     <div class="{card_class.get(card_type, 'metric-card')}">
-        <h3 style="margin: 0; color: #2A2A2A; font-size: 1.2rem; font-family: 'Lato', sans-serif; font-weight: 500;">{title}</h3>
-        <h2 style="margin: 0.5rem 0 0 0; color: #2A2A2A; font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">{value}</h2>
+        <h3 style="margin: 0; color: #2A2A2A; font-size: 1rem; font-family: 'Lato', sans-serif; font-weight: 500;">{title}</h3>
+        <h2 style="margin: 0.3rem 0 0 0; color: #2A2A2A; font-size: 1.8rem; font-family: 'Playfair Display', serif; font-weight: 700;">{value}</h2>
         {delta_html}
     </div>
     """
@@ -291,8 +296,8 @@ def create_progress_indicator(current_step, total_steps, step_names):
     """Create a visual progress indicator."""
     
     progress_html = """
-    <div style="margin: 2rem 0;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+    <div style="margin: 1rem 0;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
     """
     
     for i, step_name in enumerate(step_names):
@@ -608,9 +613,9 @@ def create_enhanced_sidebar():
         st.sidebar.markdown(f"""
         <div style="
             background: linear-gradient(135deg, #A44A3F 0%, #2A2A2A 100%);
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 10px;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             text-align: center;
         ">
             <div style="
@@ -639,9 +644,9 @@ def create_enhanced_sidebar():
         st.sidebar.markdown("""
         <div style="
             background: linear-gradient(135deg, #A44A3F 0%, #2A2A2A 100%);
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 10px;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             text-align: center;
         ">
             <div style="
@@ -794,7 +799,7 @@ if page == "🏠 Home":
     with col4:
         create_metric_card("Deploy Ready", "100%", None, "default")
     
-    st.markdown("---")
+    st.markdown("<hr style='margin: 1rem 0; border: 1px solid #D7CEB2;'/>", unsafe_allow_html=True)
     
     # Feature cards
     col1, col2, col3 = st.columns(3)
@@ -915,52 +920,50 @@ elif page == "📤 Data Upload":
     st.markdown('<h1 class="main-header">📤 Data Upload & Exploration</h1>', unsafe_allow_html=True)
     
     # File upload section with enhanced UI
-    col1, col2 = st.columns([2, 1])
+    uploaded_file = st.file_uploader(
+        "Choose a CSV file",
+        type=['csv'],
+        help="Upload your dataset in CSV format. The file should contain both features and target variable."
+    )
     
-    with col1:
-        uploaded_file = st.file_uploader(
-            "Choose a CSV file",
-            type=['csv'],
-            help="Upload your dataset in CSV format. The file should contain both features and target variable."
-        )
-        
-        if uploaded_file is not None:
-            try:
-                df = pd.read_csv(uploaded_file)
-                st.session_state.data = df
-                st.session_state.data_uploaded = True
-                create_status_alert(f"Successfully loaded {uploaded_file.name} with {len(df):,} rows and {len(df.columns)} columns", "success")
-                
-                # Display basic info with enhanced metric cards
+    if uploaded_file is not None:
+        try:
+            df = pd.read_csv(uploaded_file)
+            st.session_state.data = df
+            st.session_state.data_uploaded = True
+            create_status_alert(f"Successfully loaded {uploaded_file.name} with {len(df):,} rows and {len(df.columns)} columns", "success")
+
+            # Display both column blocks here
+            col1, col2 = st.columns([2, 1])
+
+            with col1:
                 st.markdown("### 📋 Dataset Overview")
-                col1, col2, col3, col4 = st.columns(4)
-                
-                with col1:
+                col11, col12, col13, col14 = st.columns(4)
+                with col11:
                     create_metric_card("Rows", f"{df.shape[0]:,}")
-                with col2:
+                with col12:
                     create_metric_card("Columns", str(df.shape[1]))
-                with col3:
+                with col13:
                     create_metric_card("Memory", f"{df.memory_usage().sum() / 1024**2:.2f} MB")
-                with col4:
+                with col14:
                     missing_count = df.isnull().sum().sum()
                     card_type = "success" if missing_count == 0 else "warning"
                     create_metric_card("Missing Values", str(missing_count), None, card_type)
-                
-            except Exception as e:
-                create_status_alert(f"Error loading file: {str(e)}", "error")
-    
-    with col2:
-        if st.session_state.data is not None:
-            st.markdown("### 🎯 Select Target Variable")
-            target_column = st.selectbox(
-                "Choose the target column for regression:",
-                st.session_state.data.columns,
-                help="This is the variable you want to predict"
-            )
-            
-            if st.button("Confirm Target Selection", type="primary"):
-                st.session_state.target_column = target_column
-                create_status_alert(f"Target variable set to: {target_column}", "success")
+
+            with col2:
+                st.markdown("### 🎯 Select Target Variable")
+                target_column = st.selectbox(
+                    "Choose the target column for regression:",
+                    df.columns,
+                    help="This is the variable you want to predict"
+                )
+
+                if st.button("Confirm Target Selection", type="primary"):
+                    st.session_state.target_column = target_column
+                    create_status_alert(f"Target variable set to: {target_column}", "success")
+
+        except Exception as e:
+            create_status_alert(f"Error loading file: {str(e)}", "error")
     
     # Display data preview with enhanced tabs
     if st.session_state.data is not None:
@@ -1089,7 +1092,7 @@ elif page == "🔧 Preprocessing":
         feature_selection = st.checkbox("Automatic feature selection", 
                                       help="Use correlation and importance metrics to select best features")
     
-    st.markdown("---")
+    st.markdown("<hr style='margin: 1rem 0; border: 1px solid #D7CEB2;'/>", unsafe_allow_html=True)
     
     # Apply preprocessing button
     if st.button("🚀 Apply Preprocessing", type="primary"):
@@ -1237,7 +1240,7 @@ elif page == "🤖 Model Training":
         estimated_time = len(models_to_train) * (2 if hyperparameter_tuning else 1)
         create_status_alert(f"Estimated training time: ~{estimated_time} minutes", "info")
     
-    st.markdown("---")
+    st.markdown("<hr style='margin: 1rem 0; border: 1px solid #D7CEB2;'/>", unsafe_allow_html=True)
     
     # Train models button
     if st.button("🚀 Start Training", type="primary"):
@@ -1694,7 +1697,7 @@ elif page == "💾 Export & Deploy":
             except Exception as e:
                 create_status_alert(f"Error generating report: {str(e)}", "error")
     
-    st.markdown("---")
+    st.markdown("<hr style='margin: 1rem 0; border: 1px solid #D7CEB2;'/>", unsafe_allow_html=True)
     
     # Deployment code section
     st.markdown("### 🚀 Deployment Code")
@@ -1811,7 +1814,7 @@ elif page == "🔮 Make Predictions":
                     key=f"pred_{feature}"
                 )
     
-    st.markdown("---")
+    st.markdown("<hr style='margin: 1rem 0; border: 1px solid #D7CEB2;'/>", unsafe_allow_html=True)
     
     # Make prediction button
     if st.button("🔮 Make Prediction", type="primary"):
@@ -1872,7 +1875,7 @@ elif page == "🔮 Make Predictions":
         except Exception as e:
             create_status_alert(f"Error making prediction: {str(e)}", "error")
     
-    st.markdown("---")
+    st.markdown("<hr style='margin: 1rem 0; border: 1px solid #D7CEB2;'/>", unsafe_allow_html=True)
     
     # Batch predictions section
     st.markdown("### 📊 Batch Predictions")
