@@ -1,0 +1,22 @@
+# Regression output directory - contains generated files
+regression_output/
+
+# Model exports directory
+model_exports/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
