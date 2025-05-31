@@ -36,14 +36,8 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from scipy import stats
 
-# Interactive components
-from IPython.display import display, HTML, clear_output
-try:
-    import ipywidgets as widgets
-    from ipywidgets import interact, interactive, fixed, interact_manual
-    WIDGETS_AVAILABLE = True
-except ImportError:
-    WIDGETS_AVAILABLE = False
+# Interactive components (removed for Streamlit compatibility)
+WIDGETS_AVAILABLE = False
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -2447,9 +2441,8 @@ def create_regression_analysis_interface():
     </div>
     """
     
-    display(HTML(interface_html))
-    display(HTML(usage_html))
-    display(HTML(features_html))
+    # Removed display calls for Streamlit compatibility
+    # These were originally for Jupyter notebook display
     
     print("🎯 Enhanced Regression Framework Ready!")
     print("=" * 50)
