@@ -1,0 +1,32 @@
+{
+  "model_info": {
+    "model_type": "Pipeline",
+    "target_name": "final_grade",
+    "feature_names": [
+      "study_hours",
+      "attendance_rate",
+      "previous_grade",
+      "assignments_completed",
+      "extra_activities"
+    ],
+    "n_features": 5,
+    "created_date": "2025-05-31T09:35:29.224492",
+    "model_version": "1.0.0"
+  },
+  "training_info": {
+    "training_metrics": {
+      "cv_mean": 0.8605214150798621,
+      "cv_std": 0.03129290774279297,
+      "test_r2": 0.8460160775415624,
+      "test_rmse": 5.171675190722457,
+      "test_mae": 3.7942728260211527,
+      "test_mape": 4.722815158643778
+    },
+    "data_summary": {
+      "shape": [
+        800,
+        6
+      ],
+      "memory_usage_mb": 0.036746978759765625,
+      "dtypes": {
+        

@@ -1,0 +1,25 @@
+2025-05-30 16:58:28,314 - enhanced_regression_framework - INFO - Starting complete regression workflow
+2025-05-30 16:58:28,315 - enhanced_regression_framework - INFO - Starting data loading and validation
+2025-05-30 16:58:28,323 - enhanced_regression_framework - INFO - Data loaded successfully: (1000, 6)
+2025-05-30 16:58:28,323 - enhanced_regression_framework - INFO - Starting data preprocessing
+2025-05-30 16:58:28,324 - enhanced_regression_framework - INFO - Found categorical columns: ['division', 'level of education']
+2025-05-30 16:58:28,325 - enhanced_regression_framework - INFO - Preprocessing complete. Final features: 11
+2025-05-30 16:58:28,325 - enhanced_regression_framework - INFO - Starting model training and evaluation
+2025-05-30 16:58:28,328 - enhanced_regression_framework - INFO - Initialized 3 models: ['linear', 'ridge', 'random_forest']
+2025-05-30 16:58:28,328 - enhanced_regression_framework - INFO - Training linear
+2025-05-30 16:58:29,611 - enhanced_regression_framework - INFO - linear: R² = 0.957, RMSE = 22751.942
+2025-05-30 16:58:29,612 - enhanced_regression_framework - INFO - Training ridge
+2025-05-30 16:58:30,099 - enhanced_regression_framework - INFO - ridge: R² = 0.957, RMSE = 22749.640
+2025-05-30 16:58:30,099 - enhanced_regression_framework - INFO - Training random_forest
+2025-05-30 16:58:30,811 - enhanced_regression_framework - INFO - random_forest: R² = 0.925, RMSE = 30211.834
+2025-05-30 16:58:30,813 - enhanced_regression_framework - INFO - Model evaluation complete. Best model: ridge
+2025-05-30 16:58:30,813 - enhanced_regression_framework - INFO - Starting hyperparameter optimization
+2025-05-30 16:58:30,840 - enhanced_regression_framework - INFO - Optimized ridge: Best CV score = 0.945
+2025-05-30 16:58:30,854 - enhanced_regression_framework - INFO - ridge_optimized: R² = 0.957, RMSE = 22737.967
+2025-05-30 16:58:30,854 - enhanced_regression_framework - INFO - Hyperparameter optimization did not improve performance
+2025-05-30 16:58:30,854 - enhanced_regression_framework - INFO - Starting model interpretation
+2025-05-30 16:58:30,859 - enhanced_regression_framework - INFO - Model interpretation complete
+2025-05-30 16:58:30,860 - enhanced_regression_framework - INFO - Creating visualizations
+2025-05-30 16:58:30,995 - enhanced_regression_framework - INFO - Visualizations created successfully
+2025-05-30 16:58:30,996 - enhanced_regression_framework - INFO - Creating deployment package
+2025-05-30 16:58:30,998 - enhanced_regression_framework - ERROR - Deployment package creation failed: keys must be str, int, float, bool or None, not Int64DType

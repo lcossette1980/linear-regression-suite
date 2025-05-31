@@ -1,0 +1,24 @@
+2025-05-31 11:08:47,173 - enhanced_regression_framework - INFO - Starting complete regression workflow
+2025-05-31 11:08:47,173 - enhanced_regression_framework - INFO - Starting data loading and validation
+2025-05-31 11:08:47,185 - enhanced_regression_framework - INFO - Data loaded successfully: (800, 6)
+2025-05-31 11:08:47,185 - enhanced_regression_framework - INFO - Starting data preprocessing
+2025-05-31 11:08:47,186 - enhanced_regression_framework - INFO - Preprocessing complete. Final features: 5
+2025-05-31 11:08:47,186 - enhanced_regression_framework - INFO - Starting model training and evaluation
+2025-05-31 11:08:47,189 - enhanced_regression_framework - INFO - Initialized 3 models: ['linear', 'ridge', 'random_forest']
+2025-05-31 11:08:47,189 - enhanced_regression_framework - INFO - Training linear
+2025-05-31 11:08:48,362 - enhanced_regression_framework - INFO - linear: R² = 0.787, RMSE = 5.799
+2025-05-31 11:08:48,363 - enhanced_regression_framework - INFO - Training ridge
+2025-05-31 11:08:48,864 - enhanced_regression_framework - INFO - ridge: R² = 0.788, RMSE = 5.797
+2025-05-31 11:08:48,864 - enhanced_regression_framework - INFO - Training random_forest
+2025-05-31 11:08:49,554 - enhanced_regression_framework - INFO - random_forest: R² = 0.838, RMSE = 5.061
+2025-05-31 11:08:49,556 - enhanced_regression_framework - INFO - Model evaluation complete. Best model: random_forest
+2025-05-31 11:08:49,556 - enhanced_regression_framework - INFO - Starting hyperparameter optimization
+2025-05-31 11:08:55,178 - enhanced_regression_framework - INFO - Optimized random_forest: Best CV score = 0.856
+2025-05-31 11:08:55,526 - enhanced_regression_framework - INFO - random_forest_optimized: R² = 0.837, RMSE = 5.077
+2025-05-31 11:08:55,526 - enhanced_regression_framework - INFO - Hyperparameter optimization did not improve performance
+2025-05-31 11:08:55,527 - enhanced_regression_framework - INFO - Starting model interpretation
+2025-05-31 11:08:55,571 - enhanced_regression_framework - INFO - Model interpretation complete
+2025-05-31 11:08:55,571 - enhanced_regression_framework - INFO - Creating visualizations
+2025-05-31 11:08:55,711 - enhanced_regression_framework - INFO - Visualizations created successfully
+2025-05-31 11:08:55,711 - enhanced_regression_framework - INFO - Creating deployment package
+2025-05-31 11:08:55,737 - enhanced_regression_framework - ERROR - Deployment package creation failed: 'model_hash'

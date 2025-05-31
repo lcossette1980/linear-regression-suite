@@ -1,0 +1,35 @@
+{
+  "model_info": {
+    "model_type": "RandomForestRegressor",
+    "target_name": "MedHouseVal",
+    "feature_names": [
+      "MedInc",
+      "HouseAge",
+      "AveRooms",
+      "AveBedrms",
+      "Population",
+      "AveOccup",
+      "Latitude",
+      "Longitude"
+    ],
+    "n_features": 8,
+    "created_date": "2025-05-31T10:51:58.569984",
+    "model_version": "1.0.0"
+  },
+  "training_info": {
+    "training_metrics": {
+      "cv_mean": 0.8044927284534215,
+      "cv_std": 0.005638390923340989,
+      "test_r2": 0.8049691880418459,
+      "test_rmse": 0.5055394416102246,
+      "test_mae": 0.3275553144622095,
+      "test_mape": 18.936737800910574
+    },
+    "data_summary": {
+      "shape": [
+        20640,
+        9
+      ],
+      "memory_usage_mb": 1.4173622131347656,
+      "dtypes": {
+        
