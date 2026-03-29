@@ -14,8 +14,6 @@ We now offer an enhanced version with modern UI/UX design featuring:
 
 ### Run Enhanced Version
 ```bash
-./run_enhanced_app.sh
-# or
 streamlit run enhanced_streamlit_app.py
 ```
 
@@ -40,8 +38,8 @@ streamlit run enhanced_streamlit_app.py
 
 1. Clone this repository:
 ```bash
-git clone <your-repo-url>
-cd linregapp
+git clone https://github.com/lcossette1980/linear-regression-suite.git
+cd linear-regression-suite
 ```
 
 2. Install dependencies:
@@ -54,7 +52,7 @@ pip install -r requirements.txt
 ### Standard Version
 Run the standard Streamlit app:
 ```bash
-streamlit run streamlit_app.py
+streamlit run enhanced_streamlit_app.py
 ```
 
 ### Enhanced UI/UX Version (Recommended)
@@ -77,11 +75,9 @@ The app will open in your default browser at `http://localhost:8501`
 
 ## App Structure
 
-- `streamlit_app.py`: Standard Streamlit application
-- `enhanced_streamlit_app.py`: Enhanced UI/UX version with modern design
+- `enhanced_streamlit_app.py`: Streamlit application with modern UI/UX design
 - `enhanced_regression_framework.py`: Core regression analysis framework
 - `requirements.txt`: Python dependencies
-- `run_enhanced_app.sh`: Launch script for enhanced version
 - `model_exports/`: Directory for saved models (created automatically)
 
 ## Key Features Explained

@@ -1117,9 +1117,9 @@ elif page == "🔧 Preprocessing":
                             if len(mode_val) > 0:
                                 processed_data[col] = processed_data[col].fillna(mode_val[0])
                 elif missing_strategy == "Forward fill":
-                    processed_data = processed_data.fillna(method='ffill')
+                    processed_data = processed_data.ffill()
                 elif missing_strategy == "Backward fill":
-                    processed_data = processed_data.fillna(method='bfill')
+                    processed_data = processed_data.bfill()
                 
                 # Remove duplicates
                 if remove_duplicates:
@@ -1608,7 +1608,7 @@ elif page == "💾 Export & Deploy":
                         return int(obj)
                     elif isinstance(obj, (np.floating, np.float64, np.float32)):
                         return float(obj)
-                    elif isinstance(obj, (np.bool_, np.bool8)):
+                    elif isinstance(obj, np.bool_):
                         return bool(obj)
                     elif isinstance(obj, np.ndarray):
                         return obj.tolist()
@@ -1669,7 +1669,7 @@ elif page == "💾 Export & Deploy":
                         return int(obj)
                     elif isinstance(obj, (np.floating, np.float64, np.float32)):
                         return float(obj)
-                    elif isinstance(obj, (np.bool_, np.bool8)):
+                    elif isinstance(obj, np.bool_):
                         return bool(obj)
                     elif isinstance(obj, np.ndarray):
                         return obj.tolist()
@@ -1807,7 +1807,7 @@ elif page == "🔮 Make Predictions":
                         options=unique_values,
                         key=f"pred_{feature}"
                     )
-            except:
+            except Exception:
                 prediction_data[feature] = st.number_input(
                     feature,
                     value=0.0,

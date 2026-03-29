@@ -2,7 +2,7 @@
 # Modular, scalable, and production-ready ML pipeline
 
 import warnings
-warnings.filterwarnings("ignore")
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Core libraries
 import numpy as np
@@ -978,7 +978,7 @@ class DeploymentManager:
                 return int(obj)
             elif isinstance(obj, (np.floating, np.float64, np.float32)):
                 return float(obj)
-            elif isinstance(obj, (np.bool_, np.bool8)):
+            elif isinstance(obj, np.bool_):
                 return bool(obj)
             # Handle numpy arrays
             elif isinstance(obj, np.ndarray):
@@ -1038,7 +1038,7 @@ import json
 from pathlib import Path
 from typing import Dict, List, Union, Any
 import warnings
-warnings.filterwarnings("ignore")
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 class ProductionPredictor:
     """Production-ready prediction class with comprehensive validation."""
@@ -2512,5 +2512,3 @@ if __name__ == "__main__":
     print("Ready for production-grade regression analysis!")
     print("Run create_regression_analysis_interface() to begin!")
 
-# Auto-setup when imported
-setup_enhanced_environment()
